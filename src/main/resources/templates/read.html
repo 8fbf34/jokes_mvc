@@ -5,6 +5,9 @@
 		<title>Read Jokes</title>
 	</head>
 	<body>
+		{{#info}}
+		<p>{{info}}</p>
+		{{/info}}
 		<p><a href="/create">Create a Joke</a></p>
 		<table>
 		<thead>
@@ -12,7 +15,8 @@
 				<th scope="col">Joke</th>
 				<th scope="col">Punchline</th>
 				<th scope="col">Rating</th>
-				<th scope="col"></th>
+				<th scope="col">Update</th>
+				<th scope="col">Delete</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -21,6 +25,7 @@
 				<td>{{joke}}</td>
 				<td>{{punchline}}</td>
 				<td>{{rating}}</td>
+				<td><a href="/update?id={{id}}">Update</a>
 				<td><a href="/delete?id={{id}}">Delete</a>
 			</tr>
 		{{/jokes}}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Update a Joke</title>
+	</head>
+	<p><a href="/read">Read Jokes</a></p>
+	<form action="/update" method="POST">
+		{{#id}}
+		<input type="hidden" name="id" id="id" value="{{id}}">
+		{{/id}}
+		{{#joke}}
+		<label>Joke</label>
+		<input id="joke" name="joke" type="text" value="{{joke}}"></input>
+		<br/>
+		<label>Punchline</label>
+		<input id="punchline" name="punchline" type="text" value="{{punchline}}"></input>
+		<br/>
+		<label>Rating</label>
+		<input id="rating" name="rating" type="text" value="{{rating}}"></input>
+		<br/>
+		<input type="submit" value="Update"></input>
+		{{/joke}}
+	</form>
+	</body>
+</html>
