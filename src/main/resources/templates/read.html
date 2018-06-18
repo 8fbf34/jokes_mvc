@@ -2,13 +2,29 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Jokes MVC CRUD App</title>
+		<title>Read Jokes</title>
 	</head>
 	<body>
-		
+		<p><a href="/create">Create a Joke</a></p>
+		<table>
+		<thead>
+			<tr>
+				<th scope="col">Joke</th>
+				<th scope="col">Punchline</th>
+				<th scope="col">Rating</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
 		{{#jokes}}
-			{{joke}} - {{punchline}} - {{rating}} <br/>
+			<tr>
+				<td>{{joke}}</td>
+				<td>{{punchline}}</td>
+				<td>{{rating}}</td>
+				<td><a href="/delete?id={{id}}">Delete</a>
+			</tr>
 		{{/jokes}}
-		
+		</tbody>
+		</table>
 	</body>
 </html>
