@@ -56,4 +56,10 @@ public class Joke {
     public void setRating(int rating) {
         this.rating = rating;
     }
+    
+    public String getStars() {
+    	return new String(new char[(rating/2)%5]).replaceAll("\0", "<i class=\"fas fa-star\"></i>")
+    			+ new String(new char[rating%2]).replaceAll("\0", "<i class=\"fas fa-star-half\"></i>")
+    			+ new String(new char[((10-rating)/2)%5]).replaceAll("\0", "<i class=\"far fa-star\"></i>");
+    }
 }
